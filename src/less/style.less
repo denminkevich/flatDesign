@@ -1,12 +1,137 @@
+// general settings
+
+* {
+    box-sizing: content-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+button, input, a, textarea {
+	&:focus {
+		outline: none;
+	}
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1020px;
+}
+
 @font-face {
-    font-family: 'FuturaBookC';
-    src: url('../tools/fonts/subset-FuturaBookC.eot');
-    src: url('../tools/fonts/subset-FuturaBookC.eot?#iefix') format('embedded-opentype'),
-        url('../tools/fonts/subset-FuturaBookC.woff2') format('woff2'),
-        url('../tools/fonts/subset-FuturaBookC.woff') format('woff'),
-        url('../tools/fonts/subset-FuturaBookC.ttf') format('truetype'),
-        url('../tools/fonts/subset-FuturaBookC.svg#FuturaBookC') format('svg');
+    font-family: 'Futura Book C';
+    src: url('../tools/fonts/futurabook/subset-FuturaBookC.eot');
+    src: url('../tools/fonts/futurabook/subset-FuturaBookC.eot?#iefix') format('embedded-opentype'),
+        url('../tools/fonts/futurabook/subset-FuturaBookC.woff2') format('woff2'),
+        url('../tools/fonts/futurabook/subset-FuturaBookC.woff') format('woff'),
+        url('../tools/fonts/futurabook/subset-FuturaBookC.ttf') format('truetype'),
+        url('../tools/fonts/futurabook/subset-FuturaBookC.svg#FuturaBookC') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Futura Demi C';
+    src: url('../tools/fonts/futurademic/subset-FuturaDemiC.eot');
+    src: url('../tools/fonts/futurademic/subset-FuturaDemiC.eot') format('embedded-opentype'),
+        url('../tools/fonts/futurademic/subset-FuturaDemiC.woff2') format('woff2'),
+        url('../tools/fonts/futurademic/subset-FuturaDemiC.woff') format('woff'),
+        url('../tools/fonts/futurademic/subset-FuturaDemiC.ttf') format('truetype'),
+        url('../tools/fonts/futurademic/subset-FuturaDemiC.svg#FuturaDemiC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//colors 
+
+@white: #ffffff;
+@iconsColor: #e3b873;
+@bgColor: #131313;
+
+//mix-ins 
+
+.flex() {
+    display: flex;
+    justify-content: space-between;
+}
+
+.futuraBook() {
+    color: @white;
+    font-family: 'Futura Book C', arial, sans-serif;
+    font-weight: 400;
+}
+
+.futuraDemi() {
+    color: @white;
+    font-family: 'Futura Demi C', arial, sans-serif;
+    font-weight: 400;
+}
+
+//common things
+
+.button {
+    width: 16.1rem;
+    height: 3.7rem;
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(227, 184, 115, 0.2);
+    background-color: @iconsColor;
+    font-size: 1.3rem;
+    .futuraDemi();
+    text-transform: uppercase;
+    color: @white;
+    letter-spacing: 0.06rem;
+    transition: 0.2s;
+    &:hover {
+        background-color: darken(@iconsColor, 10%);
+    }
+}
+
+//header 
+
+.header {
+    height: 8.3rem;
+    background-color: @bgColor;
+    &-container {
+        height: 8.3rem;
+        .flex();
+        align-items: center;
+        max-width: 126.7rem;
+        margin: 0 auto;
+    }
+    &-logo {
+        .futuraDemi();
+        color: @iconsColor;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+    &-menu {
+        a {
+            padding-right: 4.6rem;
+            .futuraBook();
+            font-size: 1.4rem;
+            transition: 0.3s;
+            text-decoration: none;
+            &:last-child {
+                padding-right: none;
+            }
+            &:hover {
+                color: @iconsColor;
+            }
+        }
+    }
+    &-phone {
+        a {
+            .futuraDemi();
+            color: @iconsColor;
+            font-size: 1.4rem;
+        }
+    }
+}
