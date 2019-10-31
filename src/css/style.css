@@ -11,6 +11,9 @@ a:focus,
 textarea:focus {
   outline: none;
 }
+a {
+  text-decoration: none;
+}
 a:hover {
   text-decoration: none;
 }
@@ -32,7 +35,28 @@ a:hover {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Yeseva One';
+  src: url('../tools/fonts/YesevaOne/YesevaOne.eot');
+  src: url('../tools/fonts/YesevaOne/YesevaOne.eot?#iefix') format('embedded-opentype'), url('../tools/fonts/YesevaOne/YesevaOne.woff2') format('woff2'), url('../tools/fonts/YesevaOne/YesevaOne.woff') format('woff'), url('../tools/fonts/YesevaOne/YesevaOne.ttf') format('truetype'), url('../tools/fonts/YesevaOne/YesevaOne.svg#YesevaOne') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.flex-centerV {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.yesevaOne {
+  color: #ffffff;
+  font-family: 'Yeseva One', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
 .button {
+  cursor: pointer;
   width: 16.1rem;
   height: 3.7rem;
   border: none;
@@ -51,6 +75,26 @@ a:hover {
 }
 .button:hover {
   background-color: #dba249;
+}
+.button-white {
+  cursor: pointer;
+  width: 20.9rem;
+  height: 5.3rem;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Futura Demi C', arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-style: italic;
+  text-transform: uppercase;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.button-white:hover {
+  border-color: #d9d9d9;
+  color: #d9d9d9;
 }
 .header {
   height: 8.3rem;
@@ -86,7 +130,6 @@ a:hover {
   font-size: 1.4rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  text-decoration: none;
 }
 .header-menu a:last-child {
   padding-right: none;
@@ -100,4 +143,130 @@ a:hover {
   font-weight: 400;
   color: #e3b873;
   font-size: 1.4rem;
+  text-decoration: underline;
+}
+.first_display {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.first_display-leftbar {
+  width: 6%;
+  height: 70.7rem;
+  background-color: #131313;
+}
+.first_display-leftbar-line {
+  width: 0.2rem;
+  height: 5.1rem;
+  margin: 0 auto;
+  margin-top: 13rem;
+  background-color: #e3b873;
+}
+.first_display-leftbar a {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin: 0 auto;
+  margin-top: 10rem;
+  display: block;
+  color: #ffffff;
+  font-family: 'Futura Demi C', arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #e3b873;
+  text-transform: uppercase;
+}
+.first_display-rightbar {
+  width: 94%;
+  height: 70.7rem;
+  background: url(../img/FirstDisplayBG.jpg) center no-repeat;
+  background-size: cover;
+}
+.first_display-rightbar-dark {
+  width: 100%;
+  height: 70.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.first_display-rightbar-text {
+  padding-left: 6rem;
+}
+.first_display-rightbar-text h1 {
+  color: #ffffff;
+  font-family: 'Yeseva One', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 5.391rem;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+.first_display-rightbar-text h1 span {
+  color: #e3b873;
+}
+.first_display-rightbar-text p {
+  color: #ffffff;
+  font-family: 'Futura Book C', arial, sans-serif;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 3.094rem;
+  padding-bottom: 4rem;
+}
+.first_display-rightbar-text .main_button {
+  width: 20.9rem;
+  height: 5.3rem;
+  margin-right: 2rem;
+}
+.first_display-scroll_down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 24.7rem;
+  height: 9.7rem;
+  background-color: #131313;
+  bottom: -4.8rem;
+  left: 0;
+}
+.first_display-scroll_down a:first-child {
+  padding: 0 2rem 0 4.8rem;
+  color: #ffffff;
+  font-family: 'Yeseva One', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.first_display-scroll_down a:first-child:hover {
+  color: #d9d9d9;
+}
+.first_display-scroll_down .scroll_down-arrow {
+  width: 3rem;
+  height: 3rem;
+  border: 0.2rem solid #e3b873;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #e3b873;
+  font-size: 1.7rem;
+}
+.first_display-scroll_down .scroll_down-arrow:hover {
+  border-color: #dba249;
+  color: #dba249;
 }

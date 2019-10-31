@@ -15,6 +15,7 @@ button, input, a, textarea {
 }
 
 a {
+    text-decoration: none;
 	&:hover {
 		text-decoration: none;
 	}
@@ -49,6 +50,20 @@ a {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Yeseva One';
+    src: url('../tools/fonts/YesevaOne/YesevaOne.eot');
+    src: url('../tools/fonts/YesevaOne/YesevaOne.eot?#iefix') format('embedded-opentype'),
+        url('../tools/fonts/YesevaOne/YesevaOne.woff2') format('woff2'),
+        url('../tools/fonts/YesevaOne/YesevaOne.woff') format('woff'),
+        url('../tools/fonts/YesevaOne/YesevaOne.ttf') format('truetype'),
+        url('../tools/fonts/YesevaOne/YesevaOne.svg#YesevaOne') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 //colors 
 
 @white: #ffffff;
@@ -60,6 +75,16 @@ a {
 .flex() {
     display: flex;
     justify-content: space-between;
+}
+
+.flex-center() {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-centerV {
+    display: flex;
+    align-items: center;
 }
 
 .futuraBook() {
@@ -74,9 +99,16 @@ a {
     font-weight: 400;
 }
 
+.yesevaOne {
+    color: @white;
+    font-family: 'Yeseva One', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
 //common things
 
 .button {
+    cursor: pointer;
     width: 16.1rem;
     height: 3.7rem;
     border: none;
@@ -91,6 +123,24 @@ a {
     transition: 0.2s;
     &:hover {
         background-color: darken(@iconsColor, 10%);
+    }
+}
+
+.button-white {
+    cursor: pointer;
+    width: 20.9rem;
+    height: 5.3rem;
+    border-radius: 0.2rem;
+    border: 0.1rem solid #ffffff;
+    background-color: transparent;
+    .futuraDemi();
+    font-size: 1.3rem;
+    font-style: italic;
+    text-transform: uppercase;
+    transition: 0.2s;
+    &:hover {
+        border-color: darken(@white, 15%);
+        color: darken(@white, 15%);
     }
 }
 
@@ -118,7 +168,6 @@ a {
             .futuraBook();
             font-size: 1.4rem;
             transition: 0.3s;
-            text-decoration: none;
             &:last-child {
                 padding-right: none;
             }
@@ -132,6 +181,104 @@ a {
             .futuraDemi();
             color: @iconsColor;
             font-size: 1.4rem;
+            text-decoration: underline;
+        }
+    }
+}
+
+//main display section styles
+
+.first_display {
+    position: relative;
+    .flex();
+    &-leftbar {
+        width: 6%;
+        height: 70.7rem;
+        background-color: @bgColor;
+        &-line {
+            width: 0.2rem;
+            height: 5.1rem;
+            margin: 0 auto;
+            margin-top: 13rem;
+            background-color: @iconsColor;
+        }
+        a {
+            transform: rotate(90deg);
+            margin: 0 auto;
+            margin-top: 10rem;
+            display: block;
+            .futuraDemi();
+            font-size: 1.4rem;
+            color: @iconsColor;
+            text-transform: uppercase;
+        }
+    }
+    &-rightbar {
+        width: 94%;
+        height: 70.7rem;
+        background: url(../img/FirstDisplayBG.jpg) center no-repeat;
+        background-size: cover;
+        &-dark {
+            width: 100%;
+            height: 70.7rem;
+            .flex-centerV();
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        &-text {
+            padding-left: 6rem;
+            h1 {
+                .yesevaOne();
+                font-size: 4rem;
+                line-height: 5.391rem;
+                text-transform: uppercase;
+                padding-bottom: 2rem;
+                span {
+                    color: @iconsColor;
+                }
+            }
+            p {
+                .futuraBook();
+                font-size: 2.2rem;
+                line-height: 3.094rem;
+                padding-bottom: 4rem;
+            }
+            .main_button {
+                width: 20.9rem;
+                height: 5.3rem;
+                margin-right: 2rem;
+            }
+        }
+    }
+    &-scroll_down {
+        .flex-centerV();
+        position: absolute;
+        width: 24.7rem;
+        height: 9.7rem;
+        background-color: @bgColor;
+        bottom: -4.8rem;
+        left: 0;
+        a:first-child {
+            padding:0 2rem 0 4.8rem;
+            .yesevaOne();
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            &:hover {
+                color: darken(@white, 15%);
+            }
+        }
+        .scroll_down-arrow {
+            width: 3rem;
+            height: 3rem;
+            border: 0.2rem solid #e3b873;
+            border-radius: 50%;
+            .flex-centerV();
+            justify-content: center;
+            color: @iconsColor;
+            font-size: 1.7rem;
+            &:hover {
+                border-color: darken(@iconsColor, 10%);
+                color: darken(@iconsColor, 10%);
+            }
         }
     }
 }
