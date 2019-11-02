@@ -225,18 +225,21 @@ a:hover {
   margin-right: 2rem;
 }
 .first_display-scroll_down {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
   width: 24.7rem;
   height: 9.7rem;
   background-color: #131313;
-  bottom: -4.8rem;
-  left: 0;
 }
 .first_display-scroll_down a:first-child {
   padding: 0 2rem 0 4.8rem;
@@ -269,4 +272,10 @@ a:hover {
 .first_display-scroll_down .scroll_down-arrow:hover {
   border-color: #dba249;
   color: #dba249;
+}
+.showScrollDown {
+  opacity: 1;
+}
+.hideScrollDown {
+  opacity: 0;
 }
