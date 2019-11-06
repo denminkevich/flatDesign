@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="src/tools/slick/slick.css">
+    <link rel="stylesheet" href="src/tools/slick/slick-theme.css">
     <link rel="stylesheet" href="src/css/fontawesome.min.css">
     <link rel="stylesheet" href="src/css/all.min.css">
     <link rel="stylesheet" href="src/css/normalize.css">
@@ -52,12 +54,136 @@
     </section>
 
     <section class="projects">
+        <ul class="project-nav">
+            <li class="project-nav-list">Rostov-on-Don, Admiral</li>
+            <li class="project-nav-list">Sochi Thieves</li>
+            <li class="project-nav-list">Rostov-on-Don Patriotic</li>
+        </ul>
+        <div class="project-container">
+            <div class="project-about">
+                <div class="project-about-head">
+                    <h2>Completed projects</h2>
+                    <div class="line"></div>
+                    <p>Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction 
+                        market we have made happy more than 1000 families</p>
+                </div>
+                <div class="project-about-first">
+                    <div class="left-col">
+                        <div class="city">
+                            <h4>City:</h4>
+                            <span class="project-about-smallText">Rostov-on-Don
+                                LCD admiral</span>
+                        </div>
+                        <div class="time">
+                            <h4>Repair time:</h4>
+                            <span class="project-about-smallText">3.5 months</span>
+                        </div>
+                    </div>
+                    <div class="right-col">
+                        <div class="area">
+                            <h4>apartment area:</h4>
+                            <span class="project-about-smallText">81 m<sup>2</sup></span>
+                        </div>
+                        <div class="cost">
+                            <h4>Repair Cost:</h4>
+                            <span class="project-about-smallText">Upon request</span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="project-about-second">
+                    <div class="left-col">
+                        <div class="city">
+                            <h4>City:</h4>
+                            <span class="project-about-smallText">Sochi Thieves</span>
+                        </div>
+                        <div class="time">
+                            <h4>Repair time:</h4>
+                            <span class="project-about-smallText">4.5 months</span>
+                        </div>
+                    </div>
+                    <div class="right-col">
+                        <div class="area">
+                            <h4>apartment area:</h4>
+                            <span class="project-about-smallText">124 m<sup>2</sup></span>
+                        </div>
+                        <div class="cost">
+                            <h4>Repair Cost:</h4>
+                            <span class="project-about-smallText">Upon request</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-about-third">
+                    <div class="left-col">
+                        <div class="city">
+                            <h4>City:</h4>
+                            <span class="project-about-smallText">Rostov-on-Don Patriotic</span>
+                        </div>
+                        <div class="time">
+                            <h4>Repair time:</h4>
+                            <span class="project-about-smallText">3 months</span>
+                        </div>
+                    </div>
+                    <div class="right-col">
+                        <div class="area">
+                            <h4>apartment area:</h4>
+                            <span class="project-about-smallText">78 m<sup>2</sup></span>
+                        </div>
+                        <div class="cost">
+                            <h4>Repair Cost:</h4>
+                            <span class="project-about-smallText">Upon request</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-image">
+                <div class="project-image-first">
+                    <div class="image-one"><img src="src/img/project1.jpg" alt="Картика ремонта"></div>
+                    <div class="image-two"><img src="src/img/project2.png" alt="Картика ремонта"></div>
+                </div>
+                <div class="project-image-second">
+                    <div class="image-one"><img src="src/img/project1.jpg" alt="Картика ремонта"></div>
+                    <div class="image-two"><img src="src/img/project2.png" alt="Картика ремонта"></div>
+                </div>
+                <div class="project-image-third">
+                    <div class="image-one"><img src="src/img/project1.jpg" alt="Картика ремонта"></div>
+                    <div class="image-two"><img src="src/img/project2.png" alt="Картика ремонта"></div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script crc="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+    <script src="src/tools/slick/slick.min.js"></script>
     <script src="src/js/script.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.project-image-first').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1
+            });
+        }); 
+
+        $(document).ready(function(){
+            $('.project-image-second').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1
+            });
+        }); 
+
+        $(document).ready(function(){
+            $('.project-image-third').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1
+            });
+        }); 
+    </script>
 </body>
 </html>

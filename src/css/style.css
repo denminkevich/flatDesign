@@ -279,3 +279,18 @@ a:hover {
 .hideScrollDown {
   opacity: 0;
 }
+.projects {
+  background-color: #131313;
+}
+.projects-about-second {
+  display: none;
+}
+.projects-about-third {
+  display: none;
+}
+.projects-image-second {
+  display: none;
+}
+.projects-image-third {
+  display: none;
+}
