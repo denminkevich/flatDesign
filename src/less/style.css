@@ -204,6 +204,7 @@ a:hover {
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 1000;
   opacity: 0;
   transition: 0.5s;
   display: flex;
@@ -244,18 +245,132 @@ a:hover {
 .hideScrollDown {
   opacity: 0;
 }
-.projects {
+.project {
   background-color: #131313;
 }
-.projects-about-second {
+.project-container {
+  padding-left: 10.2rem;
+  padding-top: 10.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+.project-nav {
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 5.2rem;
+}
+.project-nav li {
+  display: inline-block;
+  margin-right: 6rem;
+  list-style: none;
+}
+.project-nav li a {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'Yeseva One', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 1.969rem;
+}
+.project-nav-active a {
+  color: #e3b873 !important;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e3b873;
+}
+.project-about {
+  width: 41.5rem;
+}
+.project-about-head {
+  position: relative;
+  padding: 7rem 0 4.1rem;
+}
+.project-about-head h2 {
+  color: #ffffff;
+  font-family: 'Yeseva One', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #e3b873;
+  font-size: 2.7rem;
+  line-height: 3.797rem;
+  letter-spacing: -0.189rem;
+  text-transform: uppercase;
+}
+.project-about-head div {
+  position: absolute;
+  top: 12.2rem;
+  left: 16.1rem;
+  margin: 0;
+  width: 9.2rem;
+  height: 0.1rem;
+  background-color: #e3b873;
+}
+.project-about-head p {
+  padding-top: 3.3rem;
+  font-family: 'Futura Book C', arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.953rem;
+  color: #ffffff;
+}
+.project-about-first {
+  display: flex;
+  justify-content: space-between;
+}
+.project-about-second {
   display: none;
 }
-.projects-about-third {
+.project-about-third {
   display: none;
 }
-.projects-image-second {
+.project-about-smallText {
+  font-family: 'Futura Book C', arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.109rem;
+  color: #ffffff;
+}
+.project-about .left-col {
+  min-height: 16rem;
+  width: 15rem;
+}
+.project-about .left-col .city {
+  padding-bottom: 3.3rem;
+}
+.project-about .left-col h4 {
+  margin: 0;
+  padding-bottom: 0.8rem;
+  color: #ffffff;
+  font-family: 'Yeseva One', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #e3b873;
+}
+.project-about .right-col {
+  width: 21.5rem;
+}
+.project-about .right-col .area {
+  padding-bottom: 5.4rem;
+}
+.project-about .right-col h4 {
+  margin: 0;
+  padding-bottom: 0.8rem;
+  color: #ffffff;
+  font-family: 'Yeseva One', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #e3b873;
+}
+.project-image {
+  width: 85rem;
+}
+.project-image-second {
   display: none;
 }
-.projects-image-third {
+.project-image-third {
   display: none;
+}
+.slick-current {
+  width: 100%;
 }

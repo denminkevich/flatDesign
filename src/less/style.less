@@ -253,6 +253,7 @@ a {
         position: fixed;
         bottom: 0;
         left: 0;
+        z-index: 1000;
         opacity: 0;
         transition: 0.5s;
         .flex-centerV();
@@ -296,20 +297,112 @@ a {
 
 // project section style
 
-.projects {
+.project {
     background-color: @bgColor;
+    &-container {
+        padding-left: 10.2rem;
+        padding-top: 10.7rem;
+        .flex();
+    }
+    &-nav {
+        margin: 0;
+        padding-left: 0;
+        padding-bottom: 5.2rem;
+        li {
+            display: inline-block;
+            margin-right: 6rem;
+            list-style: none;
+            a {
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                .yesevaOne();
+                color: rgba(255, 255, 255, 0.3);
+                line-height: 1.969rem;
+            }
+        }
+        &-active a{ 
+            color: @iconsColor !important; 
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid @iconsColor;
+        }
+    }
     &-about {
+        width: 41.5rem;
+        &-head {
+            position: relative;
+            padding: 7rem 0 4.1rem;
+            h2 {
+                .yesevaOne();
+                color: @iconsColor;
+                font-size: 2.7rem;
+                line-height: 3.797rem;
+                letter-spacing: -0.189rem;
+                text-transform: uppercase;
+            }
+            div {
+                position: absolute;
+                top: 12.2rem;
+                left: 16.1rem;
+                margin: 0;
+                width: 9.2rem;
+                height: 0.1rem;
+                background-color: @iconsColor;
+            }
+            p {
+                padding-top: 3.3rem;
+                .futuraBook();
+                font-size: 1.8rem;
+                line-height: 2.953rem;
+                color: @white;
+            }
+        }
         &-first {
-
+            .flex();
         }
         &-second {
             display: none;
         }
         &-third {
             display: none;
+        }
+        &-smallText {
+            .futuraBook();
+            font-size: 1.5rem;
+            line-height: 2.109rem;
+            color: @white;
+        }
+        .left-col {
+            min-height: 16rem;
+            width: 15rem;
+            .city {
+                padding-bottom: 3.3rem;
+            }
+            h4 {
+                margin: 0;
+                padding-bottom: 0.8rem;
+                .yesevaOne();
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                color: @iconsColor;
+            }
+        }
+        .right-col {
+            width: 21.5rem;
+            .area {
+                padding-bottom: 5.4rem;
+            }
+            h4 {
+                margin: 0;
+                padding-bottom: 0.8rem;
+                .yesevaOne();
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                color: @iconsColor;
+            }
         }
     }
     &-image {
+        width: 85rem;
         &-second {
             display: none;
         }
@@ -317,4 +410,8 @@ a {
             display: none;
         }
     }
+}
+
+.slick-current {
+    width: 100%;
 }
