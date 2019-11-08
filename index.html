@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="src/tools/slick/slick.css">
-    <link rel="stylesheet" href="src/tools/slick/slick-theme.css">
     <link rel="stylesheet" href="src/css/fontawesome.min.css">
     <link rel="stylesheet" href="src/css/all.min.css">
     <link rel="stylesheet" href="src/css/normalize.css">
@@ -13,9 +11,11 @@
     <title>Flat Design</title>
 </head>
 <body>
+    <!-- header with menu -->
     <header class="header">
         <div class="header-container">
             <span class="header-logo">IC "Repair Design Project"</span>
+            <!-- main nav -->
             <nav class="header-menu">
                 <a class="header-menu-link" href="#">HOME</a>
                 <a class="header-menu-link" href="#">PROJECTS</a>
@@ -28,12 +28,14 @@
             <button class="header-button button">Request a call</button>
         </div>
     </header>
-
+    <!-- First display, main block -->
     <section class="first_display">
+        <!-- small left bar  -->
         <div class="first_display-leftbar">
            <div class="first_display-leftbar-line"></div>
             <a href="https://www.instagram.com/?hl=ru" class="first_display-leftbar-ref">INSTAGRAM</a>
         </div>
+        <!-- main content part of the block -->
         <div class="first_display-rightbar">
             <div class="first_display-rightbar-dark">
                 <div class="first_display-rightbar-text">
@@ -47,12 +49,13 @@
                 </div>
             </div>
         </div>
+        <!-- go to footer button -->
         <div class="first_display-scroll_down">
             <a href="#">Scroll down</a>
             <a href="#"><div class="scroll_down-arrow"><i class="fas fa-angle-down"></i></div></a>
         </div>
     </section>
-
+    <!-- block with projects -->
     <section class="project">
         <div class="project-container">
             <div class="project-about">
@@ -62,6 +65,7 @@
                     <p>Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction 
                         market we have made happy more than 1000 families</p>
                 </div>
+                <!-- tabs are here  -->
                 <div class="project-about-first">
                     <div class="left-col">
                         <div class="city">
@@ -132,6 +136,7 @@
                     </div>
                 </div>
             </div>
+            <!-- slider (slick slider here) and nav between projects-->
             <div class="project-image">
                 <ul class="project-nav">
                     <li class="project-nav-list project-nav-active"><a href="#">Rostov-on-Don, Admiral</a></li>
@@ -158,35 +163,10 @@
     </section>
 
 
-
+    <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script crc="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
-    <script src="src/tools/slick/slick.min.js"></script>
+    <!-- my script -->
     <script src="src/js/script.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.project-image-first').slick({
-                infinite: true,
-                slidesToShow: 2,
-                slidesToScroll: 1
-            });
-        }); 
-
-        $(document).ready(function(){
-            $('.project-image-second').slick({
-                infinite: true,
-                slidesToShow: 2,
-                slidesToScroll: 1
-            });
-        }); 
-
-        $(document).ready(function(){
-            $('.project-image-third').slick({
-                infinite: true,
-                slidesToShow: 2,
-                slidesToScroll: 1
-            });
-        }); 
-    </script>
+    <!-- slick slider script -->
 </body>
 </html>
