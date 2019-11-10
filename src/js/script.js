@@ -105,3 +105,68 @@ projectsSlider(2);
 
 // tabs in project block
 
+let navItem = document.querySelectorAll('.project-nav-list'),
+    projectsGalleries = document.querySelectorAll('.gallery_slider'),
+    projectsAbout = document.querySelectorAll('.project-about-texts'),
+    projectDots = document.querySelectorAll('.fa-circle'),
+    dotsRightArr = document.querySelector('.fa-long-arrow-alt-right'),
+    dotsLeftArr = document.querySelector('.fa-long-arrow-alt-left');
+
+function hideGallery() {
+    for (let i = 0; i < projectsGalleries.length; i++) {
+        projectsGalleries[i].classList.remove('active');
+    }
+}
+
+function showGallery(a) {
+    projectsGalleries[a].classList.add('active');
+}
+
+function makeNonActiveNavList() {
+    for (let i = 0; i < navItem.length; i++) {
+        navItem[i].classList.remove('project-nav-active');
+    }
+}
+
+function makeActiveNavList(a) {
+    navItem[a].classList.add('project-nav-active');
+}
+
+function hideProjectAbout() {
+    for (let i = 0; i < projectsAbout.length; i++) {
+        projectsAbout[i].classList.remove('active-about');
+    }
+}
+
+function showProjectAbout(a) {
+    projectsAbout[a].classList.add('active-about');
+}
+
+function hideProjectDots() {
+    for (let i = 0; i < projectDots.length; i++) {
+        projectDots[i].classList.remove('tab_dot_active');
+    }
+}
+
+function activateProjectDots(a) {
+    projectDots[a].classList.add('tab_dot_active');
+}
+
+function hideAll() {
+    hideGallery();
+    makeNonActiveNavList();
+    hideProjectAbout();
+    hideProjectDots();
+}
+
+function showAll(a) {
+    showGallery(a);
+    makeActiveNavList(a);
+    showProjectAbout(a);
+    activateProjectDots(a);
+}
+
+dotsRightArr.addEventListener('click', function() {
+    hideAll();
+    showAll(1);
+});

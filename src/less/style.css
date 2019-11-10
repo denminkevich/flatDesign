@@ -250,6 +250,7 @@ a:hover {
 }
 .project {
   background-color: #131313;
+  padding-bottom: 20rem;
 }
 .project-container {
   padding-left: 10.2rem;
@@ -314,14 +315,11 @@ a:hover {
   line-height: 2.953rem;
   color: #ffffff;
 }
-.project-about-first {
+.project-about .active-about {
   display: flex;
   justify-content: space-between;
 }
-.project-about-second {
-  display: none;
-}
-.project-about-third {
+.project-about-texts {
   display: none;
 }
 .project-about-smallText {
@@ -365,22 +363,45 @@ a:hover {
   color: #e3b873;
 }
 .project-about-dots {
+  width: 18rem;
   padding-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-about-dots span i {
+  color: #ffffff;
+  font-size: 2.5rem;
+  transition: 0.4s;
+}
+.project-about-dots span i:hover {
+  color: #999999;
+}
+.project-about-dots div {
+  width: 6.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.project-about-dots div i {
+  color: #666666;
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+.project-about-dots div i:hover {
+  color: #b3b3b3;
+}
+.project-about-dots div .tab_dot_active {
+  color: #ffffff;
 }
 .project-image {
   width: 85rem;
 }
-.project-image-first {
+.project-image .gallery_slider {
   position: relative;
+  display: none;
+}
+.project-image .active {
   display: flex;
-}
-.project-image-second {
-  position: relative;
-  display: none;
-}
-.project-image-third {
-  position: relative;
-  display: none;
 }
 .project-image .project_pic {
   padding-right: 2rem;

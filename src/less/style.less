@@ -304,6 +304,7 @@ a {
 .project {
     // general project block set
     background-color: @bgColor;
+    padding-bottom: 20rem;
     &-container {
         padding-left: 10.2rem;
         padding-top: 10.7rem;
@@ -362,14 +363,11 @@ a {
                 color: @white;
             }
         }
-        &-first {
+        .active-about {
             .flex();
         }
         //hidden twe project descriptions 
-        &-second {
-            display: none;
-        }
-        &-third {
+        &-texts {
             display: none;
         }
         &-smallText {
@@ -408,24 +406,45 @@ a {
             }
         }
         &-dots {
+            width: 18rem;
             padding-top: 8rem;
+            .flex();
+            align-items: center;
+            span i{
+                color: @white;
+                font-size: 2.5rem;
+                transition: 0.4s;
+                &:hover {
+                    color: darken(@white, 40%);
+                }
+            }
+            div {
+                width: 6.5rem;
+                .flex();
+                i {
+                    color: darken(@white, 60%);
+                    font-size: 1.5rem;
+                    transition: 0.5s;
+                    &:hover {
+                        color: darken(@white, 30%);
+                    }
+                }
+                .tab_dot_active {
+                    color: @white;
+                }
+            }
         }
     }
     //photo of thу projects, right col
     //slider settings 
     &-image {
         width: 85rem;
-        &-first {
+        .gallery_slider {
             position: relative;
+            display: none;
+        }
+        .active {
             display: flex;
-        }
-        &-second {
-            position: relative;
-            display: none;
-        }
-        &-third {
-            position: relative;
-            display: none;
         }
         .project_pic {
             padding-right: 2rem;
