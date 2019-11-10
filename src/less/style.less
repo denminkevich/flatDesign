@@ -4,6 +4,10 @@
     box-sizing: content-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 html {
     font-size: 10px;
 }
@@ -298,34 +302,36 @@ a {
 // project section style
 
 .project {
+    // general project block set
     background-color: @bgColor;
     &-container {
         padding-left: 10.2rem;
         padding-top: 10.7rem;
         .flex();
     }
+    //menг for tabs between projects
     &-nav {
         margin: 0;
         padding-left: 0;
         padding-bottom: 5.2rem;
         li {
+            cursor: pointer;
             display: inline-block;
             margin-right: 6rem;
             list-style: none;
-            a {
-                font-size: 1.4rem;
-                text-transform: uppercase;
-                .yesevaOne();
-                color: rgba(255, 255, 255, 0.3);
-                line-height: 1.969rem;
-            }
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            .yesevaOne();
+            color: rgba(255, 255, 255, 0.3);
+            line-height: 1.969rem;
         }
-        &-active a{ 
+        &-active { 
             color: @iconsColor !important; 
             padding-bottom: 0.5rem;
             border-bottom: 1px solid @iconsColor;
         }
     }
+    //text about projects, left col
     &-about {
         width: 41.5rem;
         &-head {
@@ -359,6 +365,7 @@ a {
         &-first {
             .flex();
         }
+        //hidden twe project descriptions 
         &-second {
             display: none;
         }
@@ -400,18 +407,58 @@ a {
                 color: @iconsColor;
             }
         }
+        &-dots {
+            padding-top: 8rem;
+        }
     }
+    //photo of thу projects, right col
+    //slider settings 
     &-image {
         width: 85rem;
+        &-first {
+            position: relative;
+            display: flex;
+        }
         &-second {
+            position: relative;
             display: none;
         }
         &-third {
+            position: relative;
             display: none;
         }
+        .project_pic {
+            padding-right: 2rem;
+        }
+        .image_one {
+            order: 1;
+        }
+        .image_two {
+            order: 2;
+        }
+        .image_three {
+            order: 3;
+        }
+        //slider right arr
+        button.slider_right_arr {
+            position: absolute;
+            top: 21rem;
+            left: 75rem;
+            width: 5.5rem;
+            height: 5.5rem;
+            padding: 0;
+            border: none;
+            background-color: @iconsColor;
+            box-shadow: 0 0 1.5rem rgba(227, 184, 115, 0.5);
+            border-radius: 50%;
+            transition: 0.6s;
+            &:hover {
+                background-color: lighten(@iconsColor, 10%);
+            }
+            i {
+                color: @white;
+                font-size: 2rem;
+            }
+        }
     }
-}
-
-.slick-current {
-    width: 100%;
 }
