@@ -195,18 +195,6 @@ allDots.addEventListener('click', function() {
     }
 });
 
-// function nextTab(n) {
-//     ++n;
-//     hideAll();
-//     showAll(n);
-// }
-
-// function prevTab(n) {
-//     --n;
-//     hideAll();
-//     showAll(n);
-// }
-
 dotsRightArr.addEventListener('click', function(){
     if (tabIndex < 2) {
         tabIndex++;
