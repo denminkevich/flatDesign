@@ -176,6 +176,7 @@ fullNav.addEventListener('click', function() {
             if (target == navItem[i]) {
                 hideAll();
                 showAll(i);
+                tabIndex = i;
                 break;
             }
         }
@@ -189,6 +190,7 @@ allDots.addEventListener('click', function() {
             if (target == projectDots[i]) {
                 hideAll();
                 showAll(i);
+                tabIndex = i;
                 break;
             }
         }
