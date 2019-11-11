@@ -105,9 +105,12 @@ projectsSlider(2);
 
 // tabs in project block
 
-let navItem = document.querySelectorAll('.project-nav-list'),
+let tabIndex = 0,
+    navItem = document.querySelectorAll('.project-nav-list'),
+    fullNav = document.querySelector('.project-nav'),
     projectsGalleries = document.querySelectorAll('.gallery_slider'),
     projectsAbout = document.querySelectorAll('.project-about-texts'),
+    allDots = document.querySelector('.tab_dots'),
     projectDots = document.querySelectorAll('.fa-circle'),
     dotsRightArr = document.querySelector('.fa-long-arrow-alt-right'),
     dotsLeftArr = document.querySelector('.fa-long-arrow-alt-left');
@@ -166,7 +169,60 @@ function showAll(a) {
     activateProjectDots(a);
 }
 
-dotsRightArr.addEventListener('click', function() {
-    hideAll();
-    showAll(1);
+fullNav.addEventListener('click', function() {
+    let target = event.target;
+    if (target && target.classList.contains('project-nav-list')) {
+        for (let i = 0; i < navItem.length; i++){
+            if (target == navItem[i]) {
+                hideAll();
+                showAll(i);
+                break;
+            }
+        }
+    }
+});
+
+allDots.addEventListener('click', function() {
+    let target = event.target;
+    if (target && target.classList.contains('fa-circle')) {
+        for (let i = 0; i < projectDots.length; i++){
+            if (target == projectDots[i]) {
+                hideAll();
+                showAll(i);
+                break;
+            }
+        }
+    }
+});
+
+// function nextTab(n) {
+//     ++n;
+//     hideAll();
+//     showAll(n);
+// }
+
+// function prevTab(n) {
+//     --n;
+//     hideAll();
+//     showAll(n);
+// }
+
+dotsRightArr.addEventListener('click', function(){
+    if (tabIndex < 2) {
+        tabIndex++;
+        hideAll();
+        showAll(tabIndex);
+    } else {
+        tabIndex = --projectDots.length;
+    }
+});
+
+dotsLeftArr.addEventListener('click', function(){
+    if (tabIndex > 0) {
+        tabIndex--;
+        hideAll();
+        showAll(tabIndex);
+    } else {
+        tabIndex = 0;
+    }
 });
