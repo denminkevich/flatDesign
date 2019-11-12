@@ -44,10 +44,6 @@ a:hover {
   font-weight: normal;
   font-style: normal;
 }
-.flex-centerV {
-  display: flex;
-  align-items: center;
-}
 .yesevaOne {
   color: #ffffff;
   font-family: 'Yeseva One', Arial, Helvetica, sans-serif;
@@ -250,7 +246,7 @@ a:hover {
 }
 .project {
   background-color: #131313;
-  padding-bottom: 20rem;
+  padding-bottom: 9rem;
 }
 .project-container {
   padding-left: 10.2rem;
@@ -405,6 +401,7 @@ a:hover {
 }
 .project-image .project_pic {
   padding-right: 2rem;
+  box-shadow: 0 50px 30px rgba(0, 0, 0, 0.15);
 }
 .project-image .image_one {
   order: 1;
@@ -434,4 +431,64 @@ a:hover {
 .project-image button.slider_right_arr i {
   color: #ffffff;
   font-size: 2rem;
+}
+.online_control-darkBG {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-color: #131313;
+}
+.online_control-darkBG h3 {
+  padding-bottom: 1.2rem;
+  color: #ffffff;
+  font-family: 'Yeseva One', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.813rem;
+  text-transform: uppercase;
+}
+.online_control-darkBG-pic {
+  padding-bottom: 25.7rem;
+}
+.online_control-darkBG-video {
+  position: absolute;
+  top: 8.8rem;
+  left: 50%;
+  margin-left: -41.3rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.15);
+}
+.online_control-lightBG {
+  text-align: center;
+}
+.online_control-lightBG-verticLine {
+  display: inline-block;
+  margin-top: 27rem;
+  width: 5.5rem;
+  height: 0.2rem;
+  background-color: #e3b873;
+}
+.online_control-lightBG p {
+  margin: 0 auto;
+  width: 68.1rem;
+  padding: 3.4rem 0 9rem;
+  color: #ffffff;
+  font-family: 'Futura Book C', arial, sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.516rem;
+  color: #363636;
+}
+.online_control-lightBG form input[type=text] {
+  padding-bottom: 0.6rem;
+  width: 23.3rem;
+  border: none;
+  border-bottom: 0.1rem solid rgba(54, 54, 54, 0.3);
+}
+.online_control-lightBG form input[type=text]::placeholder {
+  font-size: 1.8rem;
+  line-height: 2.531rem;
+  color: #ffffff;
+  font-family: 'Futura Book C', arial, sans-serif;
+  font-weight: 400;
+  color: #363636;
 }

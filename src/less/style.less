@@ -73,6 +73,7 @@ a {
 @white: #ffffff;
 @iconsColor: #e3b873;
 @bgColor: #131313;
+@videoParagraphColor: #363636;
 
 //mix-ins 
 
@@ -86,7 +87,7 @@ a {
     justify-content: center;
 }
 
-.flex-centerV {
+.flex-centerV() {
     display: flex;
     align-items: center;
 }
@@ -304,7 +305,7 @@ a {
 .project {
     // general project block set
     background-color: @bgColor;
-    padding-bottom: 20rem;
+    padding-bottom: 9rem;
     &-container {
         padding-left: 10.2rem;
         padding-top: 10.7rem;
@@ -435,7 +436,7 @@ a {
             }
         }
     }
-    //photo of thу projects, right col
+    //photo of projects, right col
     //slider settings 
     &-image {
         width: 85rem;
@@ -448,6 +449,7 @@ a {
         }
         .project_pic {
             padding-right: 2rem;
+            box-shadow: 0 50px 30px rgba(0, 0, 0, 0.15);
         }
         .image_one {
             order: 1;
@@ -477,6 +479,69 @@ a {
             i {
                 color: @white;
                 font-size: 2rem;
+            }
+        }
+    }
+}
+
+//online control section settings
+.online_control {  
+    // first part of block with dark bg
+    &-darkBG {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        background-color: @bgColor;
+        h3 {
+            padding-bottom: 1.2rem;
+            color: @white;
+            .yesevaOne();
+            font-size: 2rem;
+            line-height: 2.813rem;
+            text-transform: uppercase;
+        }
+        &-pic {
+            padding-bottom: 25.7rem;
+        }
+        &-video {
+            position: absolute;
+            top: 8.8rem;
+            left: 50%;
+            margin-left: -41.3rem;
+            box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.15);
+        }
+    }
+    //second part of thу block with light bg
+    &-lightBG {
+        text-align: center;
+        &-verticLine {
+            display: inline-block;
+            margin-top: 27rem;
+            width: 5.5rem;
+            height: 0.2rem;
+            background-color: @iconsColor;
+        }
+        p {
+            margin: 0 auto;
+            width: 68.1rem;
+            padding: 3.4rem 0 9rem;
+            .futuraBook();
+            font-size: 2rem;
+            line-height: 3.516rem;
+            color: @videoParagraphColor;
+        }
+        form {
+            input[type=text] {
+                padding-bottom: 0.6rem;
+                width: 23.3rem;
+                border: none;
+                border-bottom: 0.1rem solid rgba(54, 54, 54, 0.3);
+                &::placeholder {
+                    font-size: 1.8rem;
+                    line-height: 2.531rem;
+                    .futuraBook();
+                    color: @videoParagraphColor;
+                }
             }
         }
     }
